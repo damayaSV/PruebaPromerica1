@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+}
+
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+    <div class="text-center">
+    <h1 class="display-4">Login</h1>
+
+    <table>
+        <tr>
+            <td>@Html.Label("UserName")</td>
+            <td>@Html.TextBox("UserName")</td>          
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Password")
+            </td>
+            <td>
+                @Html.Password("Password")
+            </td>
+            <td>
+                @*@Html.ValidationMessageFor(a => a.Password)*@
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Login" />
+            </td>
+            <td></td>
+        </tr>
+    </table>
+
+</div>
+}
+
+
